@@ -1,0 +1,8 @@
+prod:
+    host:          example.com
+    user:          release
+    identity_file: ~
+    deploy_path:   /var/www
+    repository:    https://github.com/bearsunday/MyVendor.Task.git
+    branch:        master
+    dotenv:        prod.env
