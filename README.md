@@ -16,6 +16,6 @@ First, eidt files entitled `servers.yml` and `deploy.php`.
 
 Deploy !
 
-    php deployer.phar deplo prod
+    php deployer.phar deploy prod
 
  
