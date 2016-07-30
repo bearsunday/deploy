@@ -4,6 +4,7 @@ require 'recipe/common.php';
 
 set('shared_dirs', ['var/log', 'var/db']);
 set('writable_dirs', ['var/tmp', 'var/log']);
+
 task('database:migrate', function()  {
     upload('{{dotenv}}', '{{release_path}}/.env');
     run("
@@ -11,6 +12,14 @@ task('database:migrate', function()  {
         composer setup;
     ");
 });
+
+task('deploy:clean', function () {
+    run('
+        cd {{release_path}};
+        rm -rf var/tmp/* var/log/*;
+    ');
+});
+
 task('deploy', [
     'deploy:prepare',
     'deploy:release',
@@ -19,8 +28,10 @@ task('deploy', [
     'deploy:shared',
     'deploy:writable',
     'deploy:symlink',
+    'deploy:clean',
     'database:migrate',
     'cleanup',
 ])->desc('Deploy your BEAR.Sunday project');
+
 
 after('deploy', 'success');
