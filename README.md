@@ -1,4 +1,4 @@
-# BEAR.Sunday Deployer.php support
+# BEAR.Sunday Deployer.php (v3) support
 
 
 ## Deployment
