@@ -37,8 +37,8 @@ stage:
     appname:       Polidog\Todo
 ```
 
-Edit `.env.prod` or `.env.prod` for application setting
-Edit `recipe/bearsunday.php` as you need. (See [documentation](https://deployer.org/))
+ * Edit `.env.prod` or `.env.prod` for application setting.
+ * Edit `deploy.php` for more customization. (See deployer [documentation](https://deployer.org/))
 
 
 # Deploy 
