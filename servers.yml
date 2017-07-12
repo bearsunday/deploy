@@ -1,0 +1,21 @@
+prod:
+    hostname:      example.com
+    user:          root
+    identity_file: ~
+    deploy_path:   /var/www/Polidog.Todo
+    repository:    https://github.com/koriym/Polidog.Todo.git
+    branch:        master
+    dotenv:        .env.prod
+    context:       prod-html-app
+    appname:       Polidog\Todo
+
+stage:
+    hostname:      example.com
+    user:          root
+    identity_file: ~
+    deploy_path:   /var/www/Polidog.Todo
+    repository:    https://github.com/koriym/Polidog.Todo.git
+    branch:        master
+    dotenv:        .env.stage
+    context:       prod-html-app
+    appname:       Polidog\Todo
