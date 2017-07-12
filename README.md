@@ -5,7 +5,7 @@
 
 Download deployer script
 ```
-cd /path/to/project/bin
+(cd /path/to/project/bin)
 git clone https://github.com/bearsunday/deploy.git
 cd deploy
 rm -rf .git
